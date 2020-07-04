@@ -10,8 +10,28 @@ class Main extends Controller {
      */
     function Index () {
 
-        $this->view("template/header");
-        $this->view("main/index");
+        $this->view("template/home-part1");
+        $this->view("template/part2-same");
+        $this->view("template/home-part3");
+        $this->view("template/home-part4");
+        $this->view("template/footer");
+        
+    }
+    function tabOne () {
+
+        $this->view("template/home-part1");
+        $this->view("template/part2-same");
+        $this->view("template/home-part3");
+        $this->view("template/home-part4");
+        $this->view("template/footer");
+        
+    }
+    function tabTwo () {
+
+        $this->view("template/home-part1");
+        $this->view("template/part2-same");
+        $this->view("template/home-part3");
+        $this->view("template/home-part4");
         $this->view("template/footer");
         
     }

@@ -1,6 +1,6 @@
 <nav id="nav">
 								<ul>
-									<li class="current"><a href="index.html">Welcome</a></li>
+									<li class="current"><a href="main/Index">Welcome</a></li>
 									<li>
 										
 										<ul>
@@ -17,8 +17,8 @@
 											<li><a href="#">Veroeros feugiat</a></li>
 										</ul>
 									</li>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="main/tabOne">Left Sidebar</a></li>
+									<li><a href="main/tabTwo">Right Sidebar</a></li>
 									</ul>
 							</nav>
 
