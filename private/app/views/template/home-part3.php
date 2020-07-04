@@ -1,6 +1,6 @@
 <nav id="nav">
 								<ul>
-									<li class="current"><a href="main/Index">Welcome</a></li>
+									<li class="current"><a href="/">Welcome</a></li>
 									<li>
 										
 										<ul>
