@@ -3,6 +3,6 @@
 
 						<!-- Logo -->
 							<div id="logo">
-								<h1><a href="index.html">My Blog</a></h1>
+								<h1><a href="/">My Blog</a></h1>
 								<span>by Janani Manoharan</span>
 							</div>
