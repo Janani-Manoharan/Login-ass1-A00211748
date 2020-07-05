@@ -17,8 +17,8 @@
 											<li><a href="#">Veroeros feugiat</a></li>
 										</ul>
 									</li>
-									<li><a href="/main/tabOne">Left Sidebar</a></li>
-									<li><a href="/main/tabTwo">Right Sidebar</a></li>
+									<li><a href="\main\tabOne">Left Sidebar</a></li>
+									<li><a href="\main\tabTwo">Right Sidebar</a></li>
 									</ul>
 							</nav>
 
