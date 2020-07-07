@@ -5,8 +5,8 @@
 									<li>
 										
 									</li>
-									<li><a href="main/tabOne">Left Sidebar</a></li>
-									<li class="current"><a href="main/tabTwo">Right Sidebar</a></li>
+									<li><a href="tabOne">Left Sidebar</a></li>
+									<li class="current"><a href="tabTwo">Right Sidebar</a></li>
 									
 								</ul>
 							</nav>
