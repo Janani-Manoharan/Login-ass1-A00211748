@@ -19,19 +19,19 @@ class Main extends Controller {
     }
     function tabOne () {
 
-        $this->view("template/home-part1");
+        $this->view("template/left-part1");
         $this->view("template/part2-same");
-        $this->view("template/home-part3");
-        $this->view("template/home-part4");
+        $this->view("template/left-part3");
+        //$this->view("template/home-part4");
         $this->view("template/footer");
         
     }
     function tabTwo () {
 
-        $this->view("template/home-part1");
+        $this->view("template/right-part1");
         $this->view("template/part2-same");
-        $this->view("template/home-part3");
-        $this->view("template/home-part4");
+        $this->view("template/right-part3");
+       // $this->view("template/home-part4");
         $this->view("template/footer");
         
     }
