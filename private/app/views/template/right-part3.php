@@ -1,12 +1,12 @@
 	<!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li><a href="index.html">Welcome</a></li>
+									<li><a href="/">Welcome</a></li>
 									<li>
 										
 									</li>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li class="current"><a href="right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="main/tabOne">Left Sidebar</a></li>
+									<li class="current"><a href="main/tabTwo">Right Sidebar</a></li>
 									
 								</ul>
 							</nav>
