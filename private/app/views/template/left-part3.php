@@ -35,7 +35,7 @@
                                             <h2>Blog List Items</h2>
 
                                             <p><?php echo $author_id; ?>
-                                                <strong><?php echo $blog_name; ?><strong>
+                                                <strong><?php echo $blog_name; ?></strong>
                                                 <?php echo $blog_theme; ?>
                                                 <?php echo $author_email; ?>
                                                 <?php echo $publish_date; ?></p>
