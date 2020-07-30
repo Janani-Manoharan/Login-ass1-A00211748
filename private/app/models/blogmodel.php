@@ -3,7 +3,7 @@ class BlogModel extends Model{
     function __construct()
     {
         parent::__construct();
-        $this->db = new PDO("mysql:host=db;dbname=data", "root","root");
+        $this->db = new PDO("mysql:host=db;dbname=database", "root","root");
     }
 
     function DbVersion(){
@@ -23,7 +23,7 @@ class BlogModel extends Model{
         return $res;
     }
 
-    function getOneBlogPost($id = 1){
+    function getOneBlogPost($id=1){
         $sql = 'SELECT * FROM blog_lists where author_id = ?';
         $stmt = $this->db->prepare($sql);
         $stmt->execute(array($id));

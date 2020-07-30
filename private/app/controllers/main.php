@@ -25,20 +25,23 @@ class Main extends Controller {
         $this->view("template/left-part1");
         $this->view("template/part2-same");
         foreach($list as $item){
-                            $this->view("list/index",$item);
+                           
+                            $this->view("template/left-part3",$item);
 
             }
         $this->view("template/left-part3");
-        //$this->view("template/home-part4");
+        $this->view("template/left-part4");
         $this->view("template/footer");
         
     }
-    function tabTwo () {
-
+    function tabTwo ($id=1) {
+        $this->model('blogmodel');
+            $One_blog = $this->blogmodel->getOneBlogPost($id);
+            
         $this->view("template/right-part1");
         $this->view("template/part2-same");
-        $this->view("template/right-part3");
-       // $this->view("template/home-part4");
+        $this->view("template/right-part3",$One_blog);
+       $this->view("template/right-part4");
         $this->view("template/footer");
         
     }
