@@ -21,16 +21,16 @@ class Main extends Controller {
 
         $this->model('blogmodel');
         $lists = $this->blogmodel->getBlogLists();
-
+            
         $this->view("template/left-part1");
         $this->view("template/part2-same");
+        $this->view("template/left-part3a");
         foreach($lists as $item){
                            
               $this->view("template/left-part3",$item);
 
             }
-        //$this->view("template/left-part3");
-        $this->view("template/left-part4");
+            $this->view("template/left-part3b");
         $this->view("template/footer");
         
     }
