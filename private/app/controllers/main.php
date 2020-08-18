@@ -20,16 +20,16 @@ class Main extends Controller {
     function tabOne () {
 
         $this->model('blogmodel');
-        $list = $this->blogmodel->getBlogLists();
+        $lists = $this->blogmodel->getBlogLists();
 
         $this->view("template/left-part1");
         $this->view("template/part2-same");
-        foreach($list as $item){
+        foreach($lists as $item){
                            
-                            $this->view("template/left-part3",$item);
+              $this->view("template/left-part3",$item);
 
             }
-        $this->view("template/left-part3");
+        //$this->view("template/left-part3");
         $this->view("template/left-part4");
         $this->view("template/footer");
         
