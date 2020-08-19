@@ -45,19 +45,18 @@
                                                 <input type="email" id = "email" name = "email" value = "Your Email"/>
                                                 <br>
                                                 <input type="date" id="date" name = "date" value="yyyy-MM-dd"/>
-                                                <br><input type ="hidden" id ="srn" name = "srn" autocomplete="cc-number"/><br>
-                                                <input type="submit" id="submit" name ="submit">
+                                                <br><br>
+                                                <input type="submit" id="submit" name ="submit" >
                                             </form>    
                                             <?php if(isset($_POST['submit'])){
                                                 $blogname = $_POST['blogname'];
                                                 $blogtheme = $_POST['blogtheme'];
                                                 $email = $_POST['email'];
                                                 $date = $_POST['date'];
-                                                $srn = $_POST['srn'];
-                                              $this->model('blogmodel');
-            
-                                                $main_blog = 
-                                                $this->blogmodel->createOneBlogPost($blogname,$blogtheme,$email,$date,$srn);
+                                                
+                                                   
+                                                     $this->model('blogmodel');
+                                                $val = $this->blogmodel->createOneBlogPost($blogname,$blogtheme,$email);
                                                
                                             }?>
 										</section>
