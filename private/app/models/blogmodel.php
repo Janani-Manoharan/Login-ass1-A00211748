@@ -31,12 +31,11 @@ class BlogModel extends Model{
         return $res;
         
     }
-    function createOneBlogPost($){
-        $sql = 'INSERT INTO blog_lists where author_id = ?';
+    function createOneBlogPost($blogname,$blogtheme,$email,$date,$srn){
+       // $sql = "INSERT INTO blog_lists values ('$srn','$blogname','$blogtheme','$email',sysdate)";
+        $sql = "INSERT INTO blog_lists {author_id, blog_name, blog_theme, author_email, publish_date} values (4,'blogname','blogtheme','email@email.com',sysdate)";
         $stmt = $this->db->prepare($sql);
-        $stmt->execute(array($id));
-        $res = $stmt->fetch();
-        return $res;
+        $stmt->execute(array($blogname,$blogtheme,$email,$date,$srn));
         
     }
 }

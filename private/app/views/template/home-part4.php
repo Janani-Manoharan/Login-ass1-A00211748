@@ -44,7 +44,7 @@
                                                 <br>
                                                 <input type="email" id = "email" name = "email" value = "Your Email"/>
                                                 <br>
-                                                <input type="date" id="date" name = "date" value="dd/mm/yyyy"/>
+                                                <input type="date" id="date" name = "date" value="yyyy-MM-dd"/>
                                                 <br><input type ="hidden" id ="srn" name = "srn" autocomplete="cc-number"/><br>
                                                 <input type="submit" id="submit" name ="submit">
                                             </form>    
@@ -54,7 +54,11 @@
                                                 $email = $_POST['email'];
                                                 $date = $_POST['date'];
                                                 $srn = $_POST['srn'];
-
+                                              $this->model('blogmodel');
+            
+                                                $main_blog = 
+                                                $this->blogmodel->createOneBlogPost($blogname,$blogtheme,$email,$date,$srn);
+                                               
                                             }?>
 										</section>
 									</div>

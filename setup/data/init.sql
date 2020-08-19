@@ -6,7 +6,7 @@ author_id int not null
 );
 
 CREATE TABLE blog_lists (
-    author_id int primary key
+    author_id int primary key  
     , blog_name varchar(255)
     , blog_theme text
     , author_email varchar(255) REFERENCES author(email) 
