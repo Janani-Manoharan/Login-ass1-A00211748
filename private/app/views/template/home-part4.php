@@ -35,7 +35,27 @@
 												Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
 												consequat etiam lorem ipsum dolor sit amet nullam.</p>
 											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis lectus sit amet phasellus quam turpis.</p>
-											
+                                            
+                                            
+                                            <form method="POST" class="form">
+                                                <input type = "text" id = "blogname" name = "blogname" value="Blog Tittle"/>
+                                                <br>
+                                                <textarea id = "blogtheme" name = "blogtheme" value="Blog Content" rows = "10" cols="5" >Fill in your Content !!!</textarea>
+                                                <br>
+                                                <input type="email" id = "email" name = "email" value = "Your Email"/>
+                                                <br>
+                                                <input type="date" id="date" name = "date" value="dd/mm/yyyy"/>
+                                                <br><input type ="hidden" id ="srn" name = "srn" autocomplete="cc-number"/><br>
+                                                <input type="submit" id="submit" name ="submit">
+                                            </form>    
+                                            <?php if(isset($_POST['submit'])){
+                                                $blogname = $_POST['blogname'];
+                                                $blogtheme = $_POST['blogtheme'];
+                                                $email = $_POST['email'];
+                                                $date = $_POST['date'];
+                                                $srn = $_POST['srn'];
+
+                                            }?>
 										</section>
 									</div>
 

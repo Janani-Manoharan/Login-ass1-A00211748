@@ -31,5 +31,13 @@ class BlogModel extends Model{
         return $res;
         
     }
+    function createOneBlogPost($){
+        $sql = 'INSERT INTO blog_lists where author_id = ?';
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute(array($id));
+        $res = $stmt->fetch();
+        return $res;
+        
+    }
 }
 ?>
