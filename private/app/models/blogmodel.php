@@ -36,7 +36,17 @@ class BlogModel extends Model{
        // $sql = "INSERT INTO blog_lists {author_id, blog_name, blog_theme, author_email, publish_date} values (4,'blogname','blogtheme','email@email.com',sysdate)";
         $stmt = $this->db->prepare($sql);
         $stmt->execute(array($blogname,$blogtheme,$email));
+        $res = $stmt->fetch();
+        return $res;
         
+    }
+
+    function updateOneBlogPost($blogname,$blogtheme,$email,$id){
+        $sql = 'UPDATE blog_lists SET blog_name = ?, blog_theme = ?, author_email = ? where author_id = ?';
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute(array($blogname,$blogtheme,$email,$id));
+        $res = $stmt->fetch();
+        return $res;
     }
 }
 ?>

@@ -38,13 +38,14 @@
                                             
                                             
                                             <form method="POST" class="form">
-                                                <input type = "text" id = "blogname" name = "blogname" placeholder="Blog Tittle"/>
+                                                <input type = "text" id = "blogname" name = "blogname" value = "<?php echo $blog_name; ?>"/>
                                                 <br>
-                                                <textarea id = "blogtheme" name = "blogtheme" placeholder="Fill in your Content !!!" rows = "10" cols="5" ></textarea>
+                                                <textarea id = "blogtheme" name = "blogtheme"  rows = "10" cols="5" ><?php echo $blog_theme; ?></textarea>
                                                 <br>
-                                                <input type="email" id = "email" name = "email" placeholder = "Your Email"/>
+                                                <input type="email" id = "email" name = "email" value="<?php echo $author_email; ?>"/>
                                                 <br>
-                                                <input type="date" id="date" name = "date"/>
+                                                <input type="text" id="dates" name = "dates" value="<?php echo $publish_date; ?>"/>
+                                                <input type="hidden" id="id" name = "id" value ="<?php echo $author_id; ?>"/>
                                                 <br><br>
                                                 <input type="submit" id="submit" name ="submit" >
                                             </form>    
@@ -53,16 +54,10 @@
                                                 $blogtheme = $_POST['blogtheme'];
                                                 $email = $_POST['email'];
                                                 $date = $_POST['date'];
-                                                
-                                                   if($blogname != null && $blogtheme != null && $email != null && $date != null){
-                                                     $this->model('blogmodel');
-                                                $val = $this->blogmodel->createOneBlogPost($blogname,$blogtheme,$email);
-                                                   }
-                                                   else
-                                                   {
-                                                     echo "Enter all parameters"; 
-                                                   }
-                                               
+                                                $id = $_POST['id'];
+                                                $this->model('blogmodel');
+                                                $val = $this->blogmodel->updateOneBlogPost($blogname,$blogtheme,$email,$id);
+                                                 
                                             }?>
 										</section>
 									</div>

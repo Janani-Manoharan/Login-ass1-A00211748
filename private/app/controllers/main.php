@@ -34,6 +34,8 @@ class Main extends Controller {
         $this->view("template/footer");
         
     }
+
+
     function tabTwo ($id=1) {
         $this->model('blogmodel');
             $One_blog = $this->blogmodel->getOneBlogPost($id);
@@ -44,6 +46,19 @@ class Main extends Controller {
        $this->view("template/right-part4");
         $this->view("template/footer");
         
+    }
+
+    function tabThree($id=4){
+         if(isset($_REQUEST['link'])){
+                                                
+           $id = $_REQUEST['id'];
+          
+         }
+          $this->model('blogmodel');
+        $val = $this->blogmodel->getOneBlogPost($id);
+        $this->view("template/left-part1");
+        $this->view("template/part2-same");
+        $this->view("template/update",$val);
     }
 
 }
