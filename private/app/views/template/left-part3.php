@@ -1,6 +1,5 @@
 
-                                                <li><a href ="tabThree" id = "link"> 
-                                                <p id ="id" name="id"><?php echo $author_id; ?></p>
+                                                <li><a href ="tabThree"> <?php echo $author_id; ?>
                                                 <strong><?php echo $blog_name; ?></strong>
                                                 <?php echo $blog_theme; ?>
                                                 <?php echo $author_email; ?>

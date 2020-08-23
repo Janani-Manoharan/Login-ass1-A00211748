@@ -48,13 +48,21 @@ class Main extends Controller {
         
     }
 
-    function tabThree($id=4){
-         if(isset($_REQUEST['link'])){
+    function tabThree($id=null){
+         $this->model('blogmodel');
+         if(isset($_POST['submit'])){
+                                                $blogname = $_POST['blogname'];
+                                                $blogtheme = $_POST['blogtheme'];
+                                                $email = $_POST['email'];
+                                                $date = $_POST['date'];
+                                                $id = $_POST['id'];
                                                 
-           $id = $_REQUEST['id'];
-          
-         }
-          $this->model('blogmodel');
+                                                  
+                                                   
+                                                $val = $this->blogmodel->updateOneBlogPost($blogname,$blogtheme,$email,$id);
+                                                
+                                               
+                                            }
         $val = $this->blogmodel->getOneBlogPost($id);
         $this->view("template/left-part1");
         $this->view("template/part2-same");

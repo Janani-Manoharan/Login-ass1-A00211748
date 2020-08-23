@@ -49,16 +49,7 @@
                                                 <br><br>
                                                 <input type="submit" id="submit" name ="submit" >
                                             </form>    
-                                            <?php if(isset($_POST['submit'])){
-                                                $blogname = $_POST['blogname'];
-                                                $blogtheme = $_POST['blogtheme'];
-                                                $email = $_POST['email'];
-                                                $date = $_POST['date'];
-                                                $id = $_POST['id'];
-                                                $this->model('blogmodel');
-                                                $val = $this->blogmodel->updateOneBlogPost($blogname,$blogtheme,$email,$id);
-                                                 
-                                            }?>
+                                           
 										</section>
 									</div>
 
