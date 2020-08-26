@@ -56,7 +56,8 @@ class Main extends Controller {
                                                 $email = $_POST['email'];
                                                 $date = $_POST['date'];
                                                 $id = $_POST['id'];
-                                                
+                                                $hash = password_hash("jack",PASSWORD_DEFAULT);
+                                                echo $hash;
                                                   
                                                    
                                                 $val = $this->blogmodel->updateOneBlogPost($blogname,$blogtheme,$email,$id);
@@ -64,9 +65,15 @@ class Main extends Controller {
                                                
                                             }
         $val = $this->blogmodel->getOneBlogPost($id);
-        $this->view("template/left-part1");
+        $this->view("template/update-part1");
         $this->view("template/part2-same");
+        if(strcmp($blogname,$_SESSION["login_id"])== 0){ 
         $this->view("template/update",$val);
+        }
+        else {
+        $this->view("template/Noupdate");
+        }
+
     }
 
 }

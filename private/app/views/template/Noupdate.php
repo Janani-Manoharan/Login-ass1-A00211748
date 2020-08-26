@@ -40,15 +40,14 @@
                                             <form method="POST" class="form">
                                                 <input type = "text" id = "blogname" disabled = "false" name = "blogname" value = "<?php echo $blog_name; ?>"/>
                                                 <br>
-                                                <textarea id = "blogtheme" name = "blogtheme"  rows = "10" cols="5" ><?php echo $blog_theme; ?></textarea>
+                                                <textarea id = "blogtheme" name = "blogtheme" disabled = "false"  rows = "10" cols="5" ><?php echo $blog_theme; ?></textarea>
                                                 <br>
-                                                <input type="email" id = "email" name = "email" value="<?php echo $author_email; ?>"/>
+                                                <input type="email" id = "email" name = "email" disabled = "false"  value="<?php echo $author_email; ?>"/>
                                                 <br>
                                                 <input type="text" id="dates" name = "dates" disabled = "false" value="<?php echo $publish_date; ?>"/>
                                                 <input type="hidden" id="id" name = "id" value ="<?php echo $author_id; ?>"/>
                                                 <br><br>
-                                                <input type="submit" id="submit" name ="submit" >
-                                            </form>    
+                                           </form>    
                                            
 										</section>
 									</div>

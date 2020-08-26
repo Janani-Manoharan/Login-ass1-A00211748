@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title><?php echo $blog_name; ?>'s Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/public/css/main.css" />
+	</head>
+	<body class="is-preload left-sidebar">
+		<div id="page-wrapper">
