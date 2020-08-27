@@ -3,7 +3,8 @@
 					<div id="banner" class="box container">
 						<div class="row">
 							<div class="col-7 col-12-medium">
-								<h2>Hi. This is my Story.</h2>
+                                <h2>Hi. I am <?php echo $blog_name; ?> </h2>
+                                <h5>This is my Story.</h5>
 								<p>Hope everyone is doing well...</p>
 							</div>
 							

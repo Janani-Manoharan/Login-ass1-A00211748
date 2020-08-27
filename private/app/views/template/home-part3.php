@@ -1,6 +1,6 @@
 <nav id="nav">
 								<ul>
-									<li class="current"><a href="/">Welcome</a></li>
+									<li class="current"><a href="mainPage">Welcome</a></li>
 									<li>
 										
 										<ul>
@@ -17,8 +17,9 @@
 											<li><a href="#">Veroeros feugiat</a></li>
 										</ul>
 									</li>
-									<li><a href="main/tabOne">Left Sidebar</a></li>
-									<li><a href="main/tabTwo">Right Sidebar</a></li>
+									<li><a href="tabOne">Blog Lists</a></li>
+									<li><a href="tabTwo">Single Blog</a></li>
+                                    <li><a href="logOut">Log Out</a></li>
 									</ul>
 							</nav>
 

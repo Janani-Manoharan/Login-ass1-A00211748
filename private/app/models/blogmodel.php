@@ -48,5 +48,13 @@ class BlogModel extends Model{
         $res = $stmt->fetch();
         return $res;
     }
+
+    function getHash($login){
+         $sql = 'SELECT hash_val FROM blog_author where author_name = ?';
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute(array($login));
+        $res = $stmt->fetch();
+        return $res[0];
+    }
 }
 ?>

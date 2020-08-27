@@ -1,13 +1,14 @@
 <!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li><a href="/">Welcome</a></li>
+									<li><a href="mainPage">Welcome</a></li>
 									<li>
 										
 												
 									</li>
-									<li class="current"><a href="tabOne">Left Sidebar</a></li>
-									<li><a href="tabTwo">Right Sidebar</a></li>
+									<li class="current"><a href="tabOne">Blog Lists</a></li>
+									<li><a href="tabTwo">Single Blog</a></li>
+                                    <li><a href="logOut">Log Out</a></li>
 									
 								</ul>
 							</nav>
