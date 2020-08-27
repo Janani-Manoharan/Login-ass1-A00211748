@@ -23,12 +23,18 @@ class Main extends Controller {
             header("Location: /main/Index");
         }
 
-        }
-        
-        $this->view("template/home-part1");
+        }else{
+            if(empty($_SESSION["isValid"]) || !$_SESSION["isValid"]){
+                $this->view("template/home-part1");
         $this->view("template/part2-same");
         $this->view("template/signin");
         $this->view("template/footer");
+            }else{
+                header("Location: /main/mainPage");
+            }
+        }
+        
+        
     }
 
     function mainPage(){
@@ -77,22 +83,27 @@ class Main extends Controller {
                                                 $email = $_POST['email'];
                                                 $date = $_POST['date'];
                                                 $id = $_POST['id'];
-                                                $hash = password_hash("jack",PASSWORD_DEFAULT);
-                                                echo $hash;
-                                                  
-                                                   
+                                               // $hash = password_hash("jack",PASSWORD_DEFAULT);
+                                               // echo $hash;
+                                                
                                                 $val = $this->blogmodel->updateOneBlogPost($blogname,$blogtheme,$email,$id);
                                                 
                                                
                                             }
+        
         $val = $this->blogmodel->getOneBlogPost($id);
+        if(strcmp($blogname,$_SESSION["login"])== 0){ 
         $this->view("template/update-part1");
         $this->view("template/part2-same");
-        if(strcmp($blogname,$_SESSION["isValid"])== 0){ 
+        echo $blogname;
+        echo $_SESSION["login"];
+        
         $this->view("template/update",$val);
         }
         else {
-        $this->view("template/Noupdate");
+        $this->view("template/update-part1");
+        $this->view("template/part2-same");
+        $this->view("template/Noupdate",$val);
         }
 
     }
