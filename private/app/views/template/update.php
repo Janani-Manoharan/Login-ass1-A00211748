@@ -39,7 +39,7 @@
                                             
                                             
                                             <form method="POST" class="form">
-                                                <input type = "text" id = "blogname" disabled = "false" name = "blogname" value = "<?php echo $blog_name; ?>"/>
+                                                <input type = "text" id = "blogname"  name = "blogname" value = "<?php echo $blog_name; ?>"/>
                                                 <br>
                                                 <textarea id = "blogtheme" name = "blogtheme"  rows = "10" cols="5" ><?php echo $blog_theme; ?></textarea>
                                                 <br>

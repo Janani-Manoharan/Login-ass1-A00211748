@@ -4,7 +4,9 @@ author_email varchar(255) primary key
 ,author_name varchar(255) not null
 ,hash_val varchar(255) not null
 );
-
+--username - Mark, password - mark
+--username - James, password - james
+--username - Jack, password - jack
 CREATE TABLE blog_lists (
     author_id int primary key  AUTO_INCREMENT
     , blog_name varchar(255)

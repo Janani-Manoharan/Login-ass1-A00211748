@@ -75,35 +75,33 @@ class Main extends Controller {
         
     }
 
-    function tabThree($id=null){
+    function tabThree($id=null,$blog_name=null){
+       
          $this->model('blogmodel');
          if(isset($_POST['submit'])){
-                                                $blogname = $_POST['blogname'];
-                                                $blogtheme = $_POST['blogtheme'];
-                                                $email = $_POST['email'];
-                                                $date = $_POST['date'];
-                                                $id = $_POST['id'];
-                                               // $hash = password_hash("jack",PASSWORD_DEFAULT);
-                                               // echo $hash;
-                                                
-                                                $val = $this->blogmodel->updateOneBlogPost($blogname,$blogtheme,$email,$id);
-                                                
-                                               
+                    $blogname = htmlentities($_POST['blogname']);
+                    $blogtheme = htmlentities($_POST['blogtheme']);
+                    $email = htmlentities($_POST['email']);
+                    $date = htmlentities($_POST['date']);
+                    $id = htmlentities($_POST['id']);
+                     //$_SESSION["hash"] = password_hash("jack",PASSWORD_DEFAULT);
+                     //echo $_SESSION["hash"];
+                     $val = $this->blogmodel->updateOneBlogPost($blogname,$blogtheme,$email,$id);
+                    
+                    
                                             }
-        
         $val = $this->blogmodel->getOneBlogPost($id);
-        if(strcmp($blogname,$_SESSION["login"])== 0){ 
+        if($blog_name == $_SESSION["login"]){ 
         $this->view("template/update-part1");
         $this->view("template/part2-same");
-        echo $blogname;
-        echo $_SESSION["login"];
-        
         $this->view("template/update",$val);
+        //$this->view("template/Noupdate",$val);
+        
         }
         else {
         $this->view("template/update-part1");
         $this->view("template/part2-same");
-        $this->view("template/Noupdate",$val);
+         $this->view("template/Noupdate",$val);
         }
 
     }
