@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 class Main extends Controller {
 
     function __construct() {
@@ -118,11 +117,11 @@ class Main extends Controller {
         // $this->view("template/part2-same");
         //  $this->view("template/Noupdate",$val);
         // }
-
+session_destroy();
     }
 
     function logOut(){
-        session_start();
+       // session_start();
 
 // Unset all of the session variables.
 $_SESSION = array();

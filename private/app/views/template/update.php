@@ -1,4 +1,4 @@
-			<!-- Banner -->
+		<!-- Banner -->
 				<div id="banner-wrapper">
 					<div id="banner" class="box container">
 						<div class="row">
@@ -48,10 +48,9 @@
                                                 <input type="text" id="dates" name = "dates" disabled = "false" value="<?php echo $publish_date; ?>"/>
                                                 <input type="hidden" id="id" name = "id" value ="<?php echo $author_id; ?>"/>
                                                 <br><br>
-                                                <?php
-                                                if($blog_name == $_SESSION["login"]): 
-                                               // echo $blog_name;
-                                                //echo ($_SESSION["login"]);?>
+                                                <?php  
+                                                if(strcmp($blog_name,$_SESSION["login"]==0)): 
+                                                ?>
 
                                                 <input type="submit" id="submit" name ="submit" >
                                                 <?php endif ?>

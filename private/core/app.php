@@ -41,6 +41,11 @@
         }
 
         function start () {
+            $session_options = array(
+            "cookie_samesite" => "strict",
+            "cookie_httponly" => true
+        );
+        session_start($session_options);
 
             $this->require("/private/app/controllers/main.php");
             $main = new Main();
