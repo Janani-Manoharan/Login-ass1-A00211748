@@ -48,7 +48,13 @@
                                                 <input type="text" id="dates" name = "dates" disabled = "false" value="<?php echo $publish_date; ?>"/>
                                                 <input type="hidden" id="id" name = "id" value ="<?php echo $author_id; ?>"/>
                                                 <br><br>
+                                                <?php
+                                                if($blog_name == $_SESSION["login"]): 
+                                               // echo $blog_name;
+                                                //echo ($_SESSION["login"]);?>
+
                                                 <input type="submit" id="submit" name ="submit" >
+                                                <?php endif ?>
                                             </form>    
                                            
 										</section>
