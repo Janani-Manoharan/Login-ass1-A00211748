@@ -38,7 +38,7 @@
                                             
                                             
                                             <form method="POST" class="form">
-                                                <input type = "text" id = "blogname" name = "blogname" placeholder="Blog Tittle"/>
+                                                <input type = "text" id = "blogname" name = "blogname"  value = "<?php echo unserialize($_SESSION["login"]); ?>"/>
                                                 <br>
                                                 <textarea id = "blogtheme" name = "blogtheme" placeholder="Fill in your Content !!!" rows = "10" cols="5" ></textarea>
                                                 <br>

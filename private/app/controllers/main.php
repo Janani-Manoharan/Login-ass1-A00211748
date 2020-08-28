@@ -47,11 +47,14 @@ class Main extends Controller {
     }
 
     function mainPage(){
+        session_start();
+        //echo unserialize($_SESSION["login"]);
         $this->view("template/home-part1");
         $this->view("template/part2-same");
         $this->view("template/home-part3");
         $this->view("template/home-part4");
         $this->view("template/footer");
+        session_destroy();
     }
     function tabOne () {
 
