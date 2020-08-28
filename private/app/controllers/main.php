@@ -1,4 +1,4 @@
-<?php 
+<?php session_start();
 class Main extends Controller {
 
     function __construct() {
@@ -8,7 +8,7 @@ class Main extends Controller {
      * http://localhost/
      */
     function Index () {
-        session_start();
+       // session_start();
         if ($_SERVER["REQUEST_METHOD"] == "POST" && (empty($_SESSION["isValid"]) || !$_SESSION["isValid"])){
         //if(isset($_POST["submit"])) {
             
@@ -47,14 +47,14 @@ class Main extends Controller {
     }
 
     function mainPage(){
-        session_start();
+        //session_start();
         //echo unserialize($_SESSION["login"]);
         $this->view("template/home-part1");
         $this->view("template/part2-same");
         $this->view("template/home-part3");
         $this->view("template/home-part4");
         $this->view("template/footer");
-        session_destroy();
+        //session_destroy();
     }
     function tabOne () {
 
@@ -120,7 +120,7 @@ class Main extends Controller {
         // $this->view("template/part2-same");
         //  $this->view("template/Noupdate",$val);
         // }
-session_destroy();
+//session_destroy();
     }
 
     function logOut(){

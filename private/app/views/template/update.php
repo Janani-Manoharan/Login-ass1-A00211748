@@ -1,5 +1,4 @@
-		<!-- Banner -->
-				<div id="banner-wrapper">
+<!-- Banner -->				<div id="banner-wrapper">
 					<div id="banner" class="box container">
 						<div class="row">
 							<div class="col-7 col-12-medium">
@@ -49,7 +48,10 @@
                                                 <input type="hidden" id="id" name = "id" value ="<?php echo $author_id; ?>"/>
                                                 <br><br>
                                                 <?php  
-                                                if(strcmp($blog_name,$_SESSION["login"]==0)): 
+                                                //echo "gfdgd$blog_name";
+                                                //echo $_SESSION["login"];
+
+                                                if($blog_name == unserialize($_SESSION["login"])): 
                                                 ?>
 
                                                 <input type="submit" id="submit" name ="submit" >

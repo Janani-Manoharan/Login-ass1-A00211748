@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 class BlogModel extends Model{
     function __construct()
     {

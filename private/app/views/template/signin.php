@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <div id="banner-wrapper">
 					<div id="banner" class="box container">
 						<div class="row">
